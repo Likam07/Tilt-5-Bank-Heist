@@ -1249,6 +1249,7 @@ GameObject:
   - component: {fileID: 699542226}
   - component: {fileID: 699542225}
   - component: {fileID: 699542229}
+  - component: {fileID: 699542230}
   m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
@@ -1266,7 +1267,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1358,6 +1359,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 3
   _player: {fileID: 699542224}
+--- !u!54 &699542230
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 699542224}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!65 &824449115
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2001,7 +2029,7 @@ PrefabInstance:
     - target: {fileID: -7029948723529949830, guid: 841867b2de95df34480f3dff9051a283,
         type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -5049032948309972686, guid: 841867b2de95df34480f3dff9051a283,
         type: 3}
@@ -2096,7 +2124,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 841867b2de95df34480f3dff9051a283,
         type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 921391927218321214, guid: 841867b2de95df34480f3dff9051a283,
         type: 3}
@@ -2151,7 +2179,7 @@ PrefabInstance:
     - target: {fileID: 4767400413853537203, guid: 841867b2de95df34480f3dff9051a283,
         type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4767400413853537203, guid: 841867b2de95df34480f3dff9051a283,
         type: 3}
@@ -2201,7 +2229,7 @@ PrefabInstance:
     - target: {fileID: 6507901977716847365, guid: 841867b2de95df34480f3dff9051a283,
         type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6507901977716847365, guid: 841867b2de95df34480f3dff9051a283,
         type: 3}
@@ -2929,7 +2957,7 @@ MonoBehaviour:
     TAG: TFI
   editorSettings:
     selectedPlayer: 1
-    selectedPlayerSettingsPanel: 0
+    selectedPlayerSettingsPanel: 3
 --- !u!1 &1168154923
 GameObject:
   m_ObjectHideFlags: 0
