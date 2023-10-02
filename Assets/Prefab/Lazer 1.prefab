@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 490890479522029280}
   m_Layer: 6
   m_Name: Lazer 1
-  m_TagString: Untagged
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
