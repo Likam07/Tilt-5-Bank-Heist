@@ -1135,6 +1135,11 @@ namespace TiltFive
 #endif
 
         #endregion Private Classes
+
+        public static bool TryGetHandDevice(PlayerIndex one, ControllerIndex right, out WandDevice wandDevice)
+        {
+            throw new NotImplementedException();
+        }
     }
 
 }

@@ -1,15 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
+using TiltFive;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class RestartGame : MonoBehaviour
 {
-    private void OnCollisionEnter(Collision collision)
+    void Update()
     {
-        if (collision.collider.CompareTag("Player"))
+        if (TiltFive.Wand.TryGetWandDevice(TiltFive.PlayerIndex.One, TiltFive.ControllerIndex.Right,
+                out TiltFive.WandDevice wandDevice))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            if (wandDevice.One.wasPressedThisFrame)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            }
+            
         }
     }
+    
 }
