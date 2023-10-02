@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] private GameObject loseText;
     
-   // [SerializeField] private GameObject winText;
+   [SerializeField] private GameObject winText;
 
    private PlayerMovement _playerMovement;
    
@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
     {
        
         loseText.SetActive(false);
+        winText.SetActive(false);
         _playerMovement = GetComponent<PlayerMovement>();
         _audioSource = GetComponent<AudioSource>();
         
@@ -46,11 +47,26 @@ public class GameManager : MonoBehaviour
            _audioSource.Play();
            Debug.Log("I have made contact with an obstacle");
         }
+        
+        if (collision.collider.CompareTag("Exit"))
+        {
+            YouWin();
+            StopTimer?.Invoke();
+            //_audioSource.clip = _sirens;
+            //_audioSource.Play();
+            Debug.Log("Job Done");
+        }
     }
 
     void YouLose()
     {
         loseText.SetActive(true);
+        _playerMovement.canMove = false;
+    }
+    
+    void YouWin()
+    {
+        winText.SetActive(true);
         _playerMovement.canMove = false;
     }
 }
