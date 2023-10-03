@@ -2280,7 +2280,7 @@ Transform:
   m_GameObject: {fileID: 699542224}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.9995676, z: -0, w: 0.029404797}
-  m_LocalPosition: {x: -1.08, y: 2.1308765, z: -2.36}
+  m_LocalPosition: {x: -1.08, y: 2.176, z: -2.36}
   m_LocalScale: {x: 0.3989599, y: 0.39896, z: 0.3989599}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2344,12 +2344,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88dc437acbbead244bcfdac727cfd30a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loseText: {fileID: 0}
-  winText: {fileID: 0}
+  loseText: {fileID: 651498787}
+  winText: {fileID: 1498951805}
   StopTimer:
     m_PersistentCalls:
-      m_Calls: []
-  _sirens: {fileID: 0}
+      m_Calls:
+      - m_Target: {fileID: 1928279111}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _sirens: {fileID: 8300000, guid: ee6c6842ff12ffb45b9fce8cac6cf857, type: 3}
 --- !u!82 &699542232
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4473,7 +4485,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4279637747
+    rgba: 4279364674
   m_fontColor: {r: 0.25821644, g: 0.9245283, b: 0.06541473, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
